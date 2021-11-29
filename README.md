@@ -1,24 +1,53 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column             |Type      |Options                    |
+| ------------------ |--------- |-------------------------- |
+| nickname           | string   | null: false               |
+| email              | string   | null: false, unique: true |
+| encrypted_password | string   | null: false               |
 
-* Ruby version
+## Association
 
-* System dependencies
+- has_many :store_users
+- has_many :stores, through: :store_users
+- has_many :items
 
-* Configuration
+## stores テーブル
 
-* Database creation
+| Column       | Type   | Options     |
+| ------------ | ------ | ----------- |
+| store_name   | string | null: false |
 
-* Database initialization
+## Association
 
-* How to run the test suite
+- has_many :store_users
+- has_many :users, through: :store_users
+- has_many :items
 
-* Services (job queues, cache servers, search engines, etc.)
+## store_users テーブル
 
-* Deployment instructions
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| user    | references | null: false, foreign_key: true |
+| store   | references | null: false, foreign_key: true |
 
-* ...
+## Association
+
+- belongs_to :user
+- belongs_to :store
+
+## items テーブル
+| Column       | Type       | Options                        |
+| ------------ | ---------- | ------------------------------ |
+| name         | string     | null: false                    |
+| price        | integer    | null: false                    |
+| purchase_id  | integer    | null: false                    |
+| user         | references | null: false, foreign_key: true |
+| store        | references | null: false, foreign_key: true |
+
+## Association
+
+- belongs_to :user
+- belongs_to :store
