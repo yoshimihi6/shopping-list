@@ -3,19 +3,16 @@
     <%= link_to current_user.name, edit_user_path(current_user)%>
   </div>
   <div class="create-store">
-    <a href="#">お店を追加</a>
+    <%= link_to "お店を追加", new_store_path %>
   </div>
 </div>
 
 <div class="stores">
-  <div class="store">
-    <div class="store-name">
-      <a href="#">techroom1</a>
+  <% current_user.stores.each do |store| %>
+    <div class="store">
+      <div class="store-name">
+        <a href="#"><%= store.store_name %></a>
+      </div>
     </div>
-  </div>
-  <div class="store">
-    <div class="store-name">
-      <a href="#">techroom2</a>
-    </div>
-  </div>
+  <% end %>
 </div>
