@@ -3,7 +3,7 @@
   <%=form_with model: @store, local: true do |f|%>
     <div class='chat-room-form__field'>
       <div class='chat-room-form__field--left'>
-        <%= f.label :チャットルーム名, class: 'chat-room-form__label'%>
+        <%= f.label :店舗名, class: 'chat-room-form__label'%>
       </div>
       <div class='chat-room-form__field--right'>
         <%= f.text_field :store_name, class: 'chat__room_name chat-room-form__input', placeholder: '店舗名を入力してください'%>
