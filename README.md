@@ -43,7 +43,7 @@
 | ------------ | ---------- | ------------------------------ |
 | name         | string     | null: false                    |
 | price        | integer    | null: false                    |
-| purchase_id  | integer    | null: false                    |
+| content      | string     |                                |
 | user         | references | null: false, foreign_key: true |
 | store        | references | null: false, foreign_key: true |
 
