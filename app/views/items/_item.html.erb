@@ -17,5 +17,6 @@
     <div class="item-content">
       <%= item.content%>
     </div>
+    <%= image_tag item.image.variant(resize: '500x500'), class: 'item-image' if item.image.attached? %>
   </div>
 </div>
