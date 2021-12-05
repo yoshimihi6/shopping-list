@@ -45,18 +45,19 @@
   </div>
 </div>
 
-
-<div class="form">
-  <div class="form-detail">
-    <input class="form-item" placeholder= "item">
-    <input class="form-price" placeholder="price">
+<%= form_with model: [@store, @item], class: 'form', local: true do |f| %>
+  <div class="form">
+    <div class="form-detail">
+      <%= f.text_field :item_name, class: 'form-item', placeholder: '商品名' %>
+      <%= f.text_field :price, class: 'form-price', placeholder: 'price'%>
+    </div>
+    <div class="form-memo">
+      <%= f.text_area :content, class: 'form-message', placeholder: 'memo' %>
+      <label class="form-image">
+        <span class="image-file">画像</span>
+        <%= f.file_field :image, class: 'hidden' %>
+      </label>
+      <%= f.submit '送信', class: 'form-submit' %>
+    </div>
   </div>
-  <div class="form-memo">
-    <input class="form-message" placeholder="message">
-    <label class="form-image">
-      <span class="image-file">画像</span>
-      <input type="file" class="hidden">
-    </label>
-    <input class="form-submit" type="submit" value="送信">
-  </div>
-</div>
+<% end %>
