@@ -4,7 +4,7 @@ class Item < ApplicationRecord
   has_one_attached :image
 
   validates :item_name, presence: true, unless: :was_attached?
-  validates :price, presence: true
+  validates :price, numericality: { only_integer: true }
 
   def was_attached?
     self.image.attached?
