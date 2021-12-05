@@ -2,7 +2,7 @@ class StoresController < ApplicationController
 
   def index
   end
-  
+
   def new
     @store = Store.new
   end
@@ -15,6 +15,12 @@ class StoresController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    store = Store.find(params[:id])
+    store.destroy
+    redirect_to root_path
   end
 
   private
