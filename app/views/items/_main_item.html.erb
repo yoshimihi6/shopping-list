@@ -12,37 +12,7 @@
 </div>
 
 <div class="items">
-  <div class="item">
-    <div class="upper-item">
-      <div class="item-user">
-        Tom
-      </div>
-      <div class="item-date">
-        2020/3/31(Wed) 12:43:30
-      </div>
-    </div>
-    <div class="lower-item">
-      <div class="item-content">
-        おはよう
-      </div>
-    </div>
-  </div>
-
-  <div class="item">
-    <div class="upper-item">
-      <div class="item-user">
-        Tom
-      </div>
-      <div class="item-date">
-        2020/3/31(Wed) 12:47:30
-      </div>
-    </div>
-    <div class="lower-item">
-      <div class="item-content">
-        こんばんは
-      </div>
-    </div>
-  </div>
+  <%= render partial: 'item', collection: @items %>
 </div>
 
 <%= form_with model: [@store, @item], class: 'form', local: true do |f| %>
