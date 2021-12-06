@@ -1,0 +1,16 @@
+<%= form_with model: [@store, @item], class: 'form', local: true do |f| %>
+  <div class="form">
+    <div class="form-detail">
+      <%= f.text_field :item_name, class: 'form-item', placeholder: '商品名(画像か商品名のどちらかは入力してください)' %>
+      <%= f.text_field :price, class: 'form-price', placeholder: 'price(必須)'%>
+    </div>
+    <div class="form-memo">
+      <%= f.text_area :content, class: 'form-message', placeholder: 'memo' %>
+      <label class="form-image">
+        <span class="image-file">画像</span>
+        <%= f.file_field :image, class: 'hidden' %>
+      </label>
+      <%= f.submit '送信', class: 'form-submit' %>
+    </div>
+  </div>
+<% end %>

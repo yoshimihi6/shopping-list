@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   root to: "stores#index"
   resources :users, only: [:edit, :update]
   resources :stores, only: [:new, :create, :destroy] do
-    resources :items, only: [:index, :create]
+    resources :items, only: [:index, :new, :create]
   end
 end

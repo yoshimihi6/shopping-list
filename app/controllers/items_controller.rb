@@ -5,6 +5,12 @@ class ItemsController < ApplicationController
     @items = @store.items.includes(:user)
   end
 
+  def new
+    @item = Item.new
+    @store = Store.find(params[:store_id])
+    @items = @store.items.includes(:user)
+  end
+
   def create
     @store = Store.find(params[:store_id])
     @item = @store.items.new(item_params)
