@@ -1,16 +1,47 @@
-<%= form_with model: [@store, @item], class: 'form', local: true do |f| %>
-  <div class="form">
-    <div class="form-detail">
-      <%= f.text_field :item_name, class: 'form-item', placeholder: '商品名(画像か商品名のどちらかは入力してください)' %>
-      <%= f.text_field :price, class: 'form-price', placeholder: 'price(必須)'%>
+
+
+
+
+<div class='chat-room-form'>
+  <h1>新規商品登録</h1>
+  <%= form_with model: [@store, @item], local: true do |f| %>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <%= f.label :商品名, class: 'chat-room-form__label'%>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.text_field :item_name, class: 'chat__room_name chat-room-form__input', placeholder: '商品名(画像か商品名のどちらかは入力してください)' %>
+      </div>
     </div>
-    <div class="form-memo">
-      <%= f.text_area :content, class: 'form-message', placeholder: 'memo' %>
-      <label class="form-image">
-        <span class="image-file">画像</span>
-        <%= f.file_field :image, class: 'hidden' %>
-      </label>
-      <%= f.submit '送信', class: 'form-submit' %>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <%= f.label :価格, class: 'chat-room-form__label'%>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.text_field :price, class: 'chat__room_name chat-room-form__input', placeholder: 'price(必須)' %>
+      </div>
     </div>
-  </div>
-<% end %>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <%= f.label :メモ, class: 'chat-room-form__label'%>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.text_area :content, class: 'chat__room_name chat-room-form__input', placeholder: 'memo' %>
+      </div>
+    </div>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <label class='chat-room-form__label' for='chat_room_チャットメンバー'>画像</label>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <%= f.file_field :image, class: 'chat__room_name chat-room-form__input' %>
+      </div>
+    </div>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'></div>
+      <div class='chat-room-form__field--right'>
+        <%= f.submit '送信', class: 'chat-room-form__action-btn'%>
+      </div>
+    </div>
+  <% end %>
+</div>
