@@ -8,7 +8,6 @@ class StoresController < ApplicationController
   end
 
   def create
-    binding.pry
     @store = Store.new(store_params)
     if @store.save
       redirect_to root_path
