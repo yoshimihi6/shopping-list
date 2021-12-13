@@ -1,6 +1,6 @@
 ## アプリケーション名
 
-# shopping-list
+ shopping-list
 
 ## アプリケーション概要
 
