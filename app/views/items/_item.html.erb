@@ -1,22 +1,19 @@
-<div class="item">
-  <div class="upper-item">
-    <div class="item-user">
-      <%= item.user.name %>
+
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <%= image_tag item.image.variant(resize: '500x500'), class: 'card-img-top img-fluid' if item.image.attached? %>
     </div>
-    <div class="item-date">
-      <%= l item.created_at %>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"><%= item.item_name %></h5>
+        <div class="card-text"><%= item.user.name %></div>
+        <div class="card-text"><%= l item.created_at %></div>
+        <div class="card-text">
+          <%= item.price %>
+        </div>
+        <div class="card-text"><small class="text-muted"><%= item.content %></small></div>
+      </div>
     </div>
-  </div>
-  <div class="lower-message">
-    <div class="item-name">
-      <%= item.item_name %>
-    </div>
-    <div class="item-price">
-      <%= item.price %>
-    </div>
-    <div class="item-content">
-      <%= item.content%>
-    </div>
-    <%= image_tag item.image.variant(resize: '500x500'), class: 'item-image' if item.image.attached? %>
   </div>
 </div>
