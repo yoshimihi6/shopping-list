@@ -1,15 +1,15 @@
 .wrapper {
   display: flex;
+  background-color: rgb(248, 236, 232);
 }
 .side-bar {
-  background-color: #253141;
   width: 280px;
   height: 100vh;
 }
 .side-bar-header {
+  background-color: rgb(245, 213, 202);
   height: 70px;
   padding: 0 20px;
-  background-color: #253141;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,7 +52,6 @@
 }
 
 .stores {
-  background-color: #2F3E51;
   height: calc(100vh - 60px);
   padding: 0 20px;
   overflow: scroll;
@@ -64,18 +63,17 @@
 
 .store-name a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 
 
 
 .itemlist {
-  background-color: #FFFFFF;
   width: calc(100vw - 280px);
 }
 .itemlist-header {
-  background-color: burlywood;
+  background-color: rgb(245, 213, 202);
   height: 70px;
   padding: 0 10px;
   align-items: center;
@@ -128,7 +126,6 @@
 
 
 .items {
-  background-color: #FAFAFA;
   height: calc(100vh - 60px);
   padding: 46px 40px 0;
   overflow: scroll;
