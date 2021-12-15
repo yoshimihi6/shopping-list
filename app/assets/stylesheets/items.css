@@ -7,7 +7,7 @@
   height: 100vh;
 }
 .side-bar-header {
-  height: 60px;
+  height: 70px;
   padding: 0 20px;
   background-color: #253141;
   display: flex;
@@ -21,18 +21,32 @@
   text-decoration: none;
 }
 
+.header-account {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid lightblue;
+}
+
 .header-account a{
   font-size: 10px;
-  border: 1px solid lightblue;
-  padding: 12px;
+  padding: 10px;
   color: deepskyblue;
   text-decoration: none;
 }
 
+.create-store {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid lightblue;
+}
+
 .create-store a {
   font-size: 10px;
-  border: 1px solid lightblue;
-  padding: 12px;
+  padding: 10px;
   color: deepskyblue;
   text-decoration: none;
 }
@@ -62,7 +76,7 @@
 }
 .itemlist-header {
   background-color: burlywood;
-  height: 60px;
+  height: 70px;
   padding: 0 10px;
   align-items: center;
   display: flex;
@@ -72,20 +86,29 @@
 
 .left-header {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header-title {
-  font-size: 16px;
+  font-size: 24px;
   color: #FAFAFA;
   text-decoration: none;
   margin-right: 20px;
 }
 
+.header-item-botton {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid lightblue;
+  text-align: center;
+}
 
 .header-item-botton a {
   font-size: 10px;
-  border: 1px solid lightblue;
-  padding: 12px;
+  
+  padding: 5px;
   color: deepskyblue;
   text-decoration: none;
 }
