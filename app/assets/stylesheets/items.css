@@ -16,12 +16,36 @@
 }
 
 .header-name a{
-  font-size: 16px;
-  color: #FAFAFA;
+  font-size: 20px;
+  color: rgb(83, 41, 10);
   text-decoration: none;
 }
 
 .header-account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.header-account-edit {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid lightblue;
+  margin-right: 10px;
+}
+
+.header-account-edit-link a{
+  font-size: 10px;
+  padding: 10px;
+  color: deepskyblue;
+  text-decoration: none;
+}
+
+.header-account-logout {
   display: block;
   justify-content: center;
   align-items: center;
@@ -29,11 +53,26 @@
   border: 1px solid lightblue;
 }
 
-.header-account a{
+.header-account-logout-link a{
   font-size: 10px;
   padding: 10px;
   color: deepskyblue;
   text-decoration: none;
+}
+
+
+.stores-header {
+  background-color: rgb(250, 231, 225);
+  height: 70px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stores-header-title {
+  font-size: 25px;
+  color: rgb(83, 41, 10);
 }
 
 .create-store {
@@ -52,6 +91,7 @@
 }
 
 .stores {
+  background-color: rgb(250, 231, 225);
   height: calc(100vh - 60px);
   padding: 0 20px;
   overflow: scroll;
@@ -63,7 +103,7 @@
 
 .store-name a {
   text-decoration: none;
-  color: black;
+  color: rgb(83, 41, 10);
 }
 
 
@@ -86,7 +126,7 @@
 
 .header-title {
   font-size: 24px;
-  color: #FAFAFA;
+  color: rgb(83, 41, 10);
   text-decoration: none;
   margin-left: 15px;
 }
