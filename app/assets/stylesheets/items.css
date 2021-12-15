@@ -82,17 +82,19 @@
   align-items: center;
 }
 
-.left-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .header-title {
   font-size: 24px;
   color: #FAFAFA;
   text-decoration: none;
-  margin-right: 20px;
+  margin-left: 15px;
+}
+
+.right-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header-item-botton {
@@ -101,6 +103,7 @@
   justify-content: center;
   border: 1px solid lightblue;
   text-align: center;
+  margin-right: 15px;
 }
 
 .header-item-botton a {
