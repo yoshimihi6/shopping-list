@@ -105,17 +105,23 @@
 
 .header-item-botton a {
   font-size: 10px;
-  
-  padding: 5px;
+  padding: 10px;
   color: deepskyblue;
   text-decoration: none;
 }
 
 
+.header-button {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid lightblue;
+  text-align: center;
+}
+
 .header-button a {
   font-size: 10px;
-  border: 1px solid lightblue;
-  padding: 12px;
+  padding: 10px;
   color: deepskyblue;
   text-decoration: none;
 }
