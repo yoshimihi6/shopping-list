@@ -170,13 +170,12 @@
   text-decoration: none;
 }
 
-
-
-
-
-
 .items {
   height: calc(100vh - 70px);
   padding: 46px 40px 0;
   overflow: scroll;
+}
+
+.sell-yen {
+  margin-left: 40px;
 }
