@@ -5,12 +5,18 @@
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title"><%= item.item_name %></h5>
-        <div class="card-text"><%= item.user.name %></div>
-        <div class="card-text"><small class="text-muted"><%= l item.created_at %></small></div>
         <div class="card-text">
-          <span class="sell-yen">¥</span>
-          <%= item.price %>
+          <small class="text-muted">
+            <%= item.user.name %>
+            <%= l item.created_at %>
+          </small>
+        </div>
+        <div class="card-text">
+          <h5 class="card-title">
+            <%= item.item_name %>
+            <span class="sell-yen">¥</span>
+            <%= item.price %>
+          </h5>
         </div>
         <div class="card-text"><small class="text-muted"><%= item.content %></small></div>
         <div class="form-check">
